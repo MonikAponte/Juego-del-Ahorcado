@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+  <header>
+    <div class="caja">
+      <img src="imagenes/Logo.png" class="logo">
+      <h1 class="titulo-ahorcado">Ahorcado</h1>
+    </div>
+  </header>
+  <main class="ahorcado">
+    <section>
+      <div id="div-desaparece" class="botones-home">
+        <a href="#forca">
+          <!-- Buton/input -->
+          <button class="btn-iniciar" type="submit" value="iniciar-juego" id="iniciar-juego" onclick="iniciarJuego()">Iniciar Juego</button>
+          <button class="btn-agregar-palabra" type="buttom" id="agregar-palabra" onclick="agregarPalabra()">Agregar nueva palabra</button>
+        </a>
+      </div>
+    </section>
+    
+    <selection id="div-aparece-agregar" class="aparece-agregar">
+      <textarea placeholder="Ingrese el texto aquí..." class="campo-texto" id="texto-recibido"></textarea>
+
+      <div class="mensaje-advertencia">
+          <img src="imagenes/!.png" alt="simbolo de advertencia" class="simbolo">
+          <p class="mensaje-letras">Máx. 6   letras y sin acentos</p>
+      </div>
+      
+      <div class="botones-para-agregar-palabra">
+         <button class="guardar-empezar" type="submit" id="guardar-empezar" onclick="agregarPalabra()">Guardar y Jugar</button>
+         <button class="cancelar" type="submit" id="cancelar" onclick="cancelar()">Cancelar</button>
+      </div>
+    
+  </selection>
+  <selection>
+   <!-- botones del canva -->
+   <div class="botones-div-canvas">
+    <button class="btn-nuevo-juego" type="submit" id="nuevo-juego" onclick="nuevoJuego()">Nuevo juego</button>
+    <button class="btn-desistir" type="submit" value="" id="desistir" onclick="desistir()">Desistir</button> 
+</div>
+
+</selection>
+  <!-- dibujar palabras y muñeco -->
+  <selection class="canvas" id="div-aparece-ahorcado">
+     <!--panel de dibujo  -->
+      <div class="subrayado">
+        <canvas id="horca" width="600" height="600"></canvas>
+      </div> 
+  </selection>
+</main>
+    
+  <footer>
+    <p class="copyright"> &copy Copyright Mónica Aponte - 2022</p>
+    <nav>
+      <ul>
+          <li><a href="https://www.linkedin.com/in/m%C3%B3nica-hern%C3%A1ndez-aponte/" target="_blank"><img src="imagenes/linkedin.png" alt="logo linkedin" class="linkedin"></a></li>
+          <li><a href="https://github.com/MonikAponte" target="_blank"><img src="imagenes/github.png" alt="logo github" class="github"></a></li>
+      </ul> 
+  </nav>
+</footer>
+<!-- JavaScript -->
+<script src="ahorcado.js"></script>
+<script src="canvas.js"></script>
+</body>
+</html>
