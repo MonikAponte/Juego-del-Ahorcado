@@ -1,4 +1,4 @@
-# Juego-del-Ahorcado
+# Juego del Ahorcado
 Este juego de ahorcado, corresponde al segundo challenge del Programa de Oracle One Next Education + Alura 
 Requisitos:
 - Debe funcionar solo con letras mayúsculas;
